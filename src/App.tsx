@@ -9,6 +9,7 @@ import { SearchAndFilter } from './components/SearchAndFilter';
 import { StatsPanel } from './components/StatsPanel';
 import { WelcomeHero } from './components/WelcomeHero';
 import { FloatingRecordButton } from './components/FloatingRecordButton';
+import { BoltBadge } from './components/BoltBadge';
 
 function App() {
   const { voiceNotes, isLoading, addVoiceNote, deleteVoiceNote, updateVoiceNote, toggleFavorite, filterNotes, exportNotes, getStats } = useVoiceNotes();
@@ -123,6 +124,9 @@ function App() {
         {hasNotes && !isRecording && (
           <FloatingRecordButton onStartRecording={handleStartNewRecording} />
         )}
+
+        {/* Bolt Badge */}
+        <BoltBadge />
       </div>
 
       <style jsx>{`
